@@ -1,7 +1,7 @@
 'use strict';
 
 let db = require('../database/database');
-let taskTransformer = require('../tranformer/TaskTransformer');
+let taskTransformer = require('../transformer/TaskTransformer');
 
 let mongoose = require('mongoose'),
     Task = mongoose.model('Tasks');
