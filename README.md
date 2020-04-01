@@ -1,6 +1,6 @@
 # Rest-api-nodejs
 
-A RESTful API example with Nodejs and Express.
+A RESTful API example with Nodejs, Express and MongoDB.
 
 ## Installation & Run
 # Download this project
