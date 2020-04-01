@@ -7,9 +7,15 @@ let express = require('express'),
 
 // mongoose instance connection url connection
 mongoose.Promise = global.Promise;
-// mongoose.connect('mongodb://127.0.0.1/Tododb');
+mongoose.connect('mongodb://127.0.0.122:27017/Tododb', {useNewUrlParser: true, useUnifiedTopology: true},
+    function (err) {
+        if (err) {
+            console.log('Failed connecting to mongo db');
+        }
+        console.log('Success connecting to mongo db');
+    });
 
-app.use(bodyParser.json({ type: 'application/json' }));
+app.use(bodyParser.json({type: 'application/json'}));
 
 let routes = require('./api/route/TaskRoutes'); //importing route
 routes(app); //register the route
