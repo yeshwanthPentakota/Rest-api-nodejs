@@ -19,12 +19,12 @@ exports.addTask = async function (req, res) {
 
 exports.getTask = async function (req, res) {
     let result = await db.findTaskById(req.params.taskId);
-    await res.json(taskTransformer.TaskListResponse(result));
+    await res.json(taskTransformer.TaskResponse(result));
 };
 
 exports.updateTask = async function (req, res) {
     let result = await db.updateTask(req.params.taskId, req.body);
-    await res.json(taskTransformer.TaskListResponse(result));
+    await res.json(taskTransformer.TaskResponse(result));
 };
 
 
