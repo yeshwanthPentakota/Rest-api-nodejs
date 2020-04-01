@@ -7,9 +7,8 @@ let mongoose = require('mongoose'),
     Task = mongoose.model('Tasks');
 
 exports.getTasksList = async function (req, res) {
-    // let results = await db.findTasks();
-    // await res.json(taskTransformer.TaskListResponse(results));
-    res.json({message: 'Task successfully deleted'});
+    let results = await db.findTasks();
+    await res.status(200).json(taskTransformer.TaskListResponse(results));
 };
 
 exports.addTask = async function (req, res) {
