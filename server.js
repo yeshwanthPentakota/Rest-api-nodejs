@@ -7,7 +7,7 @@ let express = require('express'),
 
 // mongoose instance connection url connection
 mongoose.Promise = global.Promise;
-mongoose.connect('mongodb://127.0.0.122:27017/Tododb', {useNewUrlParser: true, useUnifiedTopology: true},
+mongoose.connect('mongodb://127.0.0.1:27017/Tododb', {useNewUrlParser: true, useUnifiedTopology: true},
     function (err) {
         if (err) {
             console.log('Failed connecting to mongo db');
